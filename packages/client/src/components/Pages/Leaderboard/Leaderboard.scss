@@ -1,0 +1,32 @@
+.leaderboard {
+  &__container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+  }
+
+  &__rank-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+
+  &__table {
+    overflow-x: auto;
+  }
+
+  &__medal {
+    font-size: 1.5rem;
+  }
+
+  &__current-user-row {
+    background-color: rgba(0, 0, 0, 0.04);
+    font-weight: 600;
+  }
+}
+

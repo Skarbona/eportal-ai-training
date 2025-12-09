@@ -10,6 +10,8 @@ import NotFound from './404/404';
 import InitResetPassword from './ResetPassword/Init';
 import SetNewPassword from './ResetPassword/SetNewPassword';
 import WaitingRoom from './WaitingRoom/WaitingRoom';
+import Leaderboard from './Leaderboard/Leaderboard';
+import Chat from './Chat/Chat';
 import { PageNames } from '../../store/pages/initialState.interface';
 import { PageParams } from '../../models/page-types';
 import { Payment } from './Premium/Premium';
@@ -44,6 +46,16 @@ export const PagesComponent: FC<Props> = ({ accessToken }) => {
       {accessToken && (
         <Route path={PageParams.Game} exact>
           <Game />
+        </Route>
+      )}
+      {accessToken && (
+        <Route path={PageParams.Leaderboard} exact>
+          <Leaderboard />
+        </Route>
+      )}
+      {accessToken && (
+        <Route path={PageParams.Chat} exact>
+          <Chat />
         </Route>
       )}
       {accessToken && (

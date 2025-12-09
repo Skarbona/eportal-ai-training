@@ -15,6 +15,12 @@ import { WaitingRoomInterface } from './waitingRoom/initialState.interface';
 import { WaitingRoomActions } from './waitingRoom/action.interface';
 import { PaymentsStateInterface } from './payments/initialState.interface';
 import { PaymentsActions } from './payments/action.interface';
+import { LeaderboardStateInterface } from './leaderboard/initialState.interface';
+import { LeaderboardActions } from './leaderboard/action.interface';
+import { ChatStateInterface } from './chat/initialState.interface';
+import { ChatActions } from './chat/action.interface';
+import { NotificationsStateInterface } from './notifications/initialState.interface';
+import { NotificationsActions } from './notifications/action.interface';
 
 export interface RootState {
   categories: CategoriesStateInterface;
@@ -24,6 +30,9 @@ export interface RootState {
   pages: PagesStateInterface;
   waitingRoom: WaitingRoomInterface;
   payments: PaymentsStateInterface;
+  leaderboard: LeaderboardStateInterface;
+  chat: ChatStateInterface;
+  notifications: NotificationsStateInterface;
 }
 
 export type Actions =
@@ -33,7 +42,10 @@ export type Actions =
   | AppActions
   | PagesActions
   | WaitingRoomActions
-  | PaymentsActions;
+  | PaymentsActions
+  | LeaderboardActions
+  | ChatActions
+  | NotificationsActions;
 
 export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, null, Action<string>>;
 

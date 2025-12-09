@@ -16,6 +16,8 @@ const PageParamsPL = {
   PaymentFailed: '/brak-platnosci',
   Page404: '/404',
   Home: '/',
+  Leaderboard: '/ranking',
+  Chat: '/czat',
 };
 
 const PageParamsEN = {
@@ -34,6 +36,8 @@ const PageParamsEN = {
   PaymentFailed: '/no-payment',
   Page404: '/404',
   Home: '/',
+  Leaderboard: '/leaderboard',
+  Chat: '/chat',
 };
 
 export const PageParams = LANGUAGE === 'en' ? PageParamsEN : PageParamsPL;
